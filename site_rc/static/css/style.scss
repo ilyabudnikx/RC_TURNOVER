@@ -1,0 +1,117 @@
+$theme-colors: (
+        "primary": #005792,
+        "danger": #fd5f00,
+        "secondary": #dee2e6
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body, html {
+  font-family: Montserrat;
+  color: #000;
+}
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #e0e0e0;
+  z-index: 1001;
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+.btn-outline-danger:hover {
+  color: #fff;
+}
+
+.div_menu {
+  height: auto;
+  border: #dee2e6 1px solid;
+}
+
+.left-list, .filter {
+  border-right: #dee2e6 1px solid;
+}
+
+.col-3 li {
+  width: 100%;
+  padding-left: 5px;
+  border: #fff 1px solid;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+li {
+  list-style-type: none;
+}
+
+.col-3 ul {
+  padding-left: 0;
+}
+
+.col-3 li:hover {
+  border: #005792 1px solid;
+  transition: all 0.3s;
+}
+
+.form_radio_btn {
+  display: inline-block;
+  margin-right: 10px;
+}
+.form_radio_btn input[type=radio] {
+  display: none;
+}
+.form_radio_btn label {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0px 15px;
+  line-height: 34px;
+  border: 1px solid #666;
+  color: #262626;
+  border-radius: 15px;
+  user-select: none;
+  transition: all .3s ease-in;
+}
+
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+  border: 1px solid #fd5f00;
+  color: #fd5f00;
+  background: none;
+}
+
+/* Hover */
+.form_radio_btn input[type=radio]:checked:hover {
+  border: 1px solid #fd5f00;
+  color: #fd5f00;
+  background: none;
+}
+
+.form_radio_btn label:hover {
+  background: #fd5f00;
+  color: #fff;
+  border: 1px solid #fd5f00;
+  transition: all .3s ease-in;
+}
+
+.image {
+  height: 200px !important;
+  width: 200px !important;
+  overflow: hidden;
+}
+
+.description {
+  white-space: nowrap; /* Текст не переносится */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  text-overflow: ellipsis;
+}
